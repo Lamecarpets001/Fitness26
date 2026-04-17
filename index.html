@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Fitness Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #38bdf8;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #020617;
+      border: 1px solid #1f2937;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #38bdf8;
+      margin-bottom: 6px;
+    }
+    details {
+      margin-bottom: 12px;
+    }
+    label {
+      display: block;
+      margin: 8px 0 4px;
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+    input[type="text"], textarea, select {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #4b5563;
+      background: #020617;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+    }
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+    button {
+      background: #38bdf8;
+      border: none;
+      color: #020617;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    button:hover {
+      background: #0ea5e9;
+    }
+    .small-btn {
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      margin-left: 6px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 8px;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px solid #111827;
+      font-size: 0.95rem;
+    }
+    li span {
+      flex: 1;
+      margin-left: 6px;
+    }
+    .checkbox {
+      width: 16px;
+      height: 16px;
+    }
+    .muted {
+      color: #6b7280;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Fitness Dashboard</h1>
+    <p class="muted">Your goals, weekly plan, and checklist — saved in this browser.</p>
+
+    <!-- MAIN GOAL -->
+    <div class="card">
+      <h2>Main Goal</h2>
+      <label for="mainGoal">What’s your current fitness goal?</label>
+      <input type="text" id="mainGoal" placeholder="Example: Build core strength for soccer" />
+      <label for="notes">Notes</label>
+      <textarea id="notes" placeholder="Example: Warm up before training, stretch after games."></textarea>
+      <button onclick="saveMain()">Save Goal</button>
+      <span id="mainSaved" class="muted"></span>
+    </div>
+
+    <!-- RECOMMENDED SCHEDULE -->
+    <div class="card">
+      <h2>Recommended Weekly Schedule (Times Per Week)</h2>
+
+      <details>
+        <summary>Core Training — 2 to 3× per week</summary>
+        <p><strong>Plank:</strong> Keep body straight, elbows under shoulders, hold 20–30 seconds.</p>
+        <p><strong>Side Plank:</strong> Stack feet, lift hips, hold 15–20 seconds each side.</p>
+        <p><strong>Dead Bug:</strong> Opposite arm/leg extend, keep back flat, 10 each side.</p>
+        <p><strong>Bird-Dog:</strong> Slow and controlled, 10 each side.</p>
+        <p><strong>Glute Bridge:</strong> Push through heels, squeeze glutes, 15 reps.</p>
+      </details>
+
+      <details>
+        <summary>Soccer Training — 3 to 5× per week</summary>
+        <p>Practice hard, focus on footwork, passing, and conditioning.</p>
+        <p>Always warm up and cool down.</p>
+      </details>
+
+      <details>
+        <summary>Strength Training — 1 to 2× per week</summary>
+        <p><strong>Bodyweight Squats:</strong> Feet shoulder
